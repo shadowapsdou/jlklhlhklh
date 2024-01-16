@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(img/descarga.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 150%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .container{
+         width: 450px;
+         padding: 20px;
+         border-radius: 55px;
+        background-color: white;
+         display: flex;
+         flex-direction: column;  
+         align-items: center; 
+         gap: 15px;
+         margin: auto;
+         margin: 30px;
+        }
+        h1{
+            color: rgba(15, 17, 159, 0.797);
+            font-size: 38px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+        .form__div{
+            width: 100%;
+            border: solid 1px #070a67 ;
+            padding: 10px 25px;
+            border-radius: 20px;
+        }
+        input{
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+        span{
+            color: #08195c;
+        }
+        button{
+            width: 100%;
+            padding: 8px 15px;
+            background: rgba(6, 40, 135, 0.797);
+            border: none;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button a{
+            text-decoration: none;
+        }
+        button:hover{
+            background: rgba(31, 34, 222, 0.797);
+        }
+        .enlace{
+            font-size: 15px;
+            color: rgb(9, 29, 72);
+            text-decoration: none;
+        }
+        .formgroup__enlace{
+            text-align: center;
+        }
+        hr{
+            width: 100%;
+        }
+        p{
+            text-align: center;
+            font-size: 14px;
+        }
+        .divgroup{
+            display: flex;
+            gap: 20px;
+        }
+        .redes{
+            width: 60px;
+            height: 60px;
+            background: rgba(44, 31, 222, 0.797);
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: rgb(248, 251, 251);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .acceso1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1>ACCESO</h1>
+            <form action="">
+                <div class="formgroup form__div">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <input class="campo" type="email" placeholder="direccion de correo electronico">
+                 </div>
+                <div class="formgroup form__div">
+                <span><i class="fa-solid fa-lock "></i></span>
+                <input class="campo" type="password" placeholder="contraseña">
+                 </div>
+                <div class="formgroup">
+                  <button type="submit"><a href="pagina1.html" class="acceso1">ACCESO</a></button>            
+                </div>
+                <div class="formgroup__enlace">
+                    <a class="enlace" href="#"><i>¿OLVIDASTE LA CONTRASEÑA?</i></a>
+                </div>
+            </form>
+            <hr>
+            <p><i>OPCIONES DE INICIO</i></p>
+            <div class="divgroup">
+                <a class="redes" href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a class="redes" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </center>
+    <script>
+        var input=document.querySelectorall(".campo")
+        var div=document.querySelectorall(".form.div")
+        input.foreach(function(el, registro){
+            el.addeventlistener("focus", function(){
+                if (registro==0){
+                    div.style.border="solid 1px black"
+                    div.style.border="solid 1px #bcb8b8 ;"
+                }else{
+                    if (registro==1){
+                        div.style.border="solid 1px #bcb8b8 ;"
+                        div.style.border="solid 1px black"
+                    }
+                }
+            })
+        })
+       </script>
+</body>
+</html>
